@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f8fc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+}
+
+.left-sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #ececec;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.left-sidebar:hover {
+    transform: translateX(-5px);
+}
+
+.center-content {
+    width: 37.5%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.center-content:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right-sidebar {
+    width: 37.5%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.right-sidebar:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-sidebar .logo {
+    width: 80%;
+    max-width: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.left-sidebar .logo:hover {
+    transform: scale(1.1);
+}
+
+h1, h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+.input-section input, .output-section input, #expiration-time {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.input-section input:focus, .output-section input:focus, #expiration-time:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.input-section button, .output-section button {
+    padding: 12px 24px;
+    background-color: #571e6e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.input-section button:hover, .output-section button:hover {
+    background-color: #7c2479;
+    transform: scale(1.05);
+}
+
+.output-section {
+    margin-top: 20px;
+}
+
+
+#expiration-time {
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+    word-wrap: break-word;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #464444;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.delete-btn i {
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    color: #686666;
+}
+
+.expires-text {
+    font-size: 12px; 
+    color: #666; 
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-sidebar, .right-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .center-content {
+        width: 100%;
+    }
+}
+.expiration-text {
+    font-size: 12px; 
+    color: #777; 
+    font-weight: normal; 
+}
+
+
+@media (max-width: 600px) {
+    .expiration-text {
+        font-size: 10px; 
+    }
+}

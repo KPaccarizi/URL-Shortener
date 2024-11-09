@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="left-sidebar">
+            <img src="logo.svg" alt="Logo" class="logo">
+            <h3>My Shortened URLs</h3>
+            <ul id="shortened-urls-list">
+                
+            </ul>
+        </div>
+
+        <div class="center-content">
+            <h1>URL Shortener</h1>
+            <div class="input-section">
+                <input type="url" id="url-input" placeholder="Enter your long URL here">
+                <button onclick="generateShortLink()">Shorten URL</button>
+            </div>
+            <div class="output-section">
+                <input type="text" id="short-url" readonly placeholder="Your shortened URL will appear here">
+                <button onclick="copyToClipboard()">Copy the link</button>
+            </div>
+            <div id="error-message" style="color: rgb(108, 22, 108); display: none;">Please enter a valid URL.</div>
+        </div>
+
+
+        <div class="right-sidebar">
+            <h3>Set Expiration Time</h3>
+            <select id="expiration-time">
+                <option value="1">1 minute</option>
+                <option value="5">5 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="60">1 hour</option>
+                <option value="120">2 hours</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
