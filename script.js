@@ -71,7 +71,7 @@ function addShortUrlToSidebar(shortUrl, longUrl, expirationOption, expirationTim
 
     const isExpired = new Date().getTime() > expirationTimestamp;
     if (isExpired) {
-        expirationText = 'Expired'; // Change the text to "Expired" if the link is expired
+        expirationText = 'Expired'; 
     }
 
     const listItem = document.createElement('li');
